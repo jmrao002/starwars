@@ -52,12 +52,12 @@
             <h2 id="name"></h2>
             <div id="stats" style="display: none;">
               <h3>
-                <strong>Role:</strong> <span id="role"></span>
+                <strong>Role:</strong> <span id="role">Jedi Master</span>
               </h3>
-              <h3><strong>Age:</strong> <span id="age"></span></h3>
+              <h3><strong>Age:</strong> <span id="age">900</span></h3>
               <h3>
                 <strong>Force Points:</strong>
-                <span id="force-points"></span>
+                <span id="force-points">2000</span>
               </h3>
             </div>
           </div>
@@ -82,7 +82,7 @@
       // Using a RegEx Pattern to remove spaces from searchedCharacter
       // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
       searchedCharacter = searchedCharacter.replace(/\s+/g, '').toLowerCase();
-
+      // talking to ourselves here - front end is fetching from our code to display the results
       fetch(`/api/characters/${searchedCharacter}`, {
         method: 'GET',
         headers: {
